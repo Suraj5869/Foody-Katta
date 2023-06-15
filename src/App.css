@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.nav {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  margin-top: -4px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  height: 50px;
+  z-index: 1;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .82em 1em;
+  padding: 0;
+}
+
+.nav a {
+  margin: .5rem 0rem;
+  padding: .5em .8em;
+  color: black;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid rgb(172, 125, 31);
+  border-right: 3px solid rgb(172, 125, 31);
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid rgb(172, 125, 31);
+  border-left: 3px solid rgb(172, 125, 31);
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: rgb(70, 56, 27);
+  background-color: rgba(255, 201, 93, 0.5);
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.line {
+  border: none;
+  height: 2px;
+  background: black;
+  margin-left: 0px;
+}
+.flex-container {
+  display: flex;
+  margin: 20px;
+  text-align: justify;
+}
+.dis {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dis h4 {
+  margin-bottom: 10px;
+}
+.hotel img{
+  border-radius: 10px;
+}
+#about {
+  /* margin-top: 10px; */
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(184, 134, 25, 0.394);
+}
+#about h3{
+  margin-bottom: 15px;
+}
+.dis button{
+  height: 40px;
+  width: 140px;
+  border-radius: 50px;
+  background-color: rgba(255, 201, 93, 0.3);
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.dis button:hover{
+  background-color: rgb(255, 201, 93);
+  color: rgb(99, 68, 6);
+  box-shadow: 0 0 15px rgb(162, 108, 2);
+}
+.menu {
+  margin-top: 40px;
+  text-align: center;
+}
+ .menu h1 {
+  margin-top: 20px;
+  /* margin-bottom: 10px; */
+}
+/* .fullbreakfast{
+  background-color: rgba(184, 134, 25, 0.394);
+} */
+.menu h2{
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+#breakfast {
+  display: flex;
+  align-items: center;
+}
+ .maincontainer {
+    width: 302px;
+    height: 299px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+ .image img {
+   border-radius: 10px;
+ }
+ .back p {
+   font-size: 15px;
+   padding: 20px;
+   text-align: justify;
+ }
+ .back h3{
+  padding-top: 10px;
+ }
+.maincontainer>.front {
+   position: absolute;
+   transform: perspective(600px) rotateY(0deg);
+   width: 302px;
+   height: 290px;
+   backface-visibility: hidden;
+   transition: transform .5s linear 0s;
+ }
+ .maincontainer>.back {
+   position: absolute;
+   transform: perspective(600px) rotateY(180deg);
+   background: #262626;
+   color: #fff;
+   width: 302px;
+   height: 290px;
+   border-radius: 10px;
+   padding: 5px;
+   backface-visibility: hidden;
+   transition: transform .5s linear 0s;
+ }
+ .maincontainer:hover>.front {
+   transform: perspective(600px) rotateY(-180deg);
+ }
+
+ .maincontainer:hover>.back {
+   transform: perspective(600px) rotateY(0deg);
+ }
+
+ .image img{
+  width: 302px;
+  height: 290px;
+ }
+#lunch {
+  display: flex;
+  margin-top: 20px;
+}
+#menu-button{
+  height:40px;
+  width:120px;
+  background-color: rgb(255, 201, 93);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+#menu-button:hover{
+  box-shadow: 0 0 15px rgb(162, 108, 2);
+  color: rgb(99, 68, 6);
+}
+.Supported {
+  text-align: center;
+  /* margin-top: 30px; */
+  padding-top: 20px;
+  background-color: rgba(184, 134, 25, 0.394);
+}
+
+#sponser {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+#sponser img {
+  margin: auto;
+  border-radius: 20px;
+}
+
+#contact {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20rem;
+}
+#contact container{
+  display: flex;
+  width: 75%;
+  
+}
+container div{
+  position: relative;
+}
+container div h1{
+  position: absolute;
+  color: white;
+  top: 7%;
+  left: 26%;
+}
+#contact container img{
+  height: 500px;
+  opacity: .7;
+}
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+  align-self: center;
+}
+.app-form-group {
+  margin-bottom: 15px;
+}
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #919191;
+  color: #000000;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #919191;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #655f5f;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #d0a521;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  margin: 1rem;
+}
+
+.app-form-button:hover {
+  color: #83751c;
+  border-bottom: 2px solid rgb(172, 125, 31);
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  background: rgb(217 178 126);
+  display: flex;
+}
+.footer h6{
+  margin-top: 5px;
+}
+.footer info{
+  margin:0px 0px 0px 40px;
+}
+.social{
+  position: absolute;
+  right: 0;
+  margin: 8px 40px 0px 0px; 
+}
+.social img{
+  margin: 5px 5px 0px 0px;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+}
